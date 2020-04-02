@@ -1,0 +1,14 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="FirstName" type="String" default="Gabriel" />
+    <aura:attribute name="LastName" type="String"  default="Santos"/>    
+    <div class="slds-align_absolute-center">
+        <div class="container">
+            <aura:if isTrue="{!v.LastName != null}">
+                Hello, {!v.FirstName + ' ' + v.LastName}
+                <aura:set attribute="else">
+                    Hello, {!v.FirstName }
+                </aura:set>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>	
