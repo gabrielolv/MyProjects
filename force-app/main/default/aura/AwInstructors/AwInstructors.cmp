@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <div class="slds-align_absolute-center">
+        <a href="tel:202-555-1212">
+            <!--<img src="/resource/DialPhoneAnimation"/>-->
+            <img src="{#$Resource.DialPhoneAnimation}" class="roundbutton"/>
+        </a>
+    </div>
+</aura:component>	
