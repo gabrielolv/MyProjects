@@ -1,5 +1,0 @@
-<aura:component>
-    <a href="tel:202-555-1212">
-        <img src="/resource/DialPhoneAnimation"/>
-    </a>
-</aura:component>	
