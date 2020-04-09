@@ -1,8 +1,10 @@
 <aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="phoneNumber" type="String" access="GLOBAL" required="true" default="999999999"/>
     <div class="slds-align_absolute-center">
-        <a href="tel:202-555-1212">
+        <a href="{! 'tel:' + v.phoneNumber}">
             <!--<img src="/resource/DialPhoneAnimation"/>-->
             <img src="{#$Resource.DialPhoneAnimation}" class="roundbutton"/>
         </a>
+        <!--<c:DialButton phoneNumber="Your Phone Number"/>-->
     </div>
 </aura:component>	
