@@ -1,6 +1,6 @@
 ({
     handleClick : function(component, event, helper) {
-        var msg = component.get("v.FirstName");
+        let msg = component.get("v.FirstName");
         if (msg == 'SEU NOME') {
             //alert("FUNCIONOU CARAMBA!!!!");
             component.set("v.FirstName", 'Olá, ' + msg + '!');
@@ -9,6 +9,10 @@
         }
     },
     doInit : function(component, event, helper){
-        alert("The component is initialized");
+        let msg = component.get("v.FirstName");
+        if(msg == null){
+            component.set("v.FirstName", 'Olá!!!');
+        }
+        //alert("The component is initialized");
     }
 })
