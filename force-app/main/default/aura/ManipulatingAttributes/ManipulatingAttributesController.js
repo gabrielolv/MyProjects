@@ -14,5 +14,5 @@
             component.set("v.FirstName", 'Olá!!!');
         }
         //alert("The component is initialized");
-    }
+     }
 })
