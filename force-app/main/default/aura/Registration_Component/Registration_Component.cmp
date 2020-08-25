@@ -20,7 +20,9 @@
     </lightning:select><b/>
     <lightning:input type="telephone"   name="mobileNumber"     label="Your mobile number"          value="{!v.mobileNumber}" /><b/>
     <lightning:input type="checkbox"    name="firstCheckbox"    label="Are you new in this curse?"  value="{!v.haveYouTakenCourseBefore}" /><b/>
-    
+
+    <lightning:button label="Submit" />
+
 
 
 
