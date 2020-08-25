@@ -1,0 +1,27 @@
+<aura:component implements="flexipage:availableForAllPageTypes, clients:availableForMailAppAppPage, flexipage:availableForRecordHome" access="global">
+    
+    Registration 
+    <aura:attribute name="nameOfStudent"                    type="String"   default="" />
+    <aura:attribute name="parentsName"                      type="String"   default="" />
+    <aura:attribute name="standardOrClass"                  type="String"   default="" />
+    <aura:attribute name="noFHoursStudy"                    type="String[]" default="Less than 1 hour, In betwen 1 to 4 hours, In betwen 4 to 8 hours, More than 8 hours" />
+    <aura:attribute name="userResponse1"                    type="String"   default="" />
+    <aura:attribute name="mobileNumber"                     type="Integer"  default="" />
+    <aura:attribute name="haveYouTakenCourseBefore"         type="Boolean"  default="" />
+    <aura:attribute name="areYouInterestedInOnlineCourse"   type="Boolean"  default="" /><b/>
+    
+    <lightning:input    name="studentName"      label="Enter your name"                 value="{!v.nameOfStudent}" /><b/>
+    <lightning:input    name="parentName"       label="Enter your Parants name"         value="{!v.parentsName}" /><b/>
+    <lightning:input    name="className"        label="Which class do you study?"       value="{!v.standardOrClass}" /><b/>
+    <lightning:select   name="numberOfHours"    label="How many hours do you study?"    value="{!v.userResponse1}" >
+        <aura:iteration items="{!v.noFHoursStudy}" var="hrs" >
+            <option value="{!hrs}" text="{!hrs}" />
+        </aura:iteration>
+    </lightning:select><b/>
+    <lightning:input type="telephone"   name="mobileNumber"     label="Your mobile number"          value="{!v.mobileNumber}" /><b/>
+    <lightning:input type="checkbox"    name="firstCheckbox"    label="Are you new in this curse?"  value="{!v.haveYouTakenCourseBefore}" /><b/>
+    <lightning:button label="Submit" />
+
+
+
+</aura:component>	
