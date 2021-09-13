@@ -8,13 +8,7 @@ public class SysAdmin {
         // Get all Custom Objects from ORG
         Set<String> customObjectsList = new Set<String>();
     
-        List<EntityDefinition> customObjects = [
-            SELECT QualifiedApiName, DeveloperName, IsCustomizable, NameSpacePrefix 
-            FROM EntityDefinition 
-            WHERE IsCustomSetting = false 
-            AND QualifiedApiName LIKE '%__c' 
-            Order by QualifiedApiName
-        ];
+        List<EntityDefinition> customObjects = [SELECT QualifiedApiName, DeveloperName, IsCustomizable, NameSpacePrefix FROM EntityDefinition WHERE IsCustomSetting = false AND QualifiedApiName LIKE '%__c' Order by QualifiedApiName];
     
         for(EntityDefinition customObject : customObjects){
             customObjectsList.add(customObject.QualifiedApiName);
